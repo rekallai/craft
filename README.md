@@ -2,6 +2,8 @@
 
 CRAFT is an open standard for structuring agentic projects — where humans and AI collaborate on everything from product vision to shipped code. It rests on a simple premise: the quality of AI output is bounded by the quality of its inputs, so context deserves the same care as code. CRAFT separates slow-moving human signal (vision, domain knowledge, references) from fast-moving AI output (plans, drafts, repositories), and keeps each at a stable, predictable path. The result is a working environment where context is reusable across plans, human intent stays legible, and agents can find what they need without MCP overhead or search gymnastics — just flat files in a tree designed for the way agentic work actually flows.
 
+This repository is itself a CRAFT-shaped scaffold: the top-level `specs/`, `references/`, `prompts/`, `plans/`, and `build/` directories ship empty (each with a short README explaining what belongs there), so you can clone it and start filling in your own project. A worked example of a fully populated CRAFT tree lives in [`references/example-projects/lighthouse/`](references/example-projects/lighthouse/) — a fictional invoice-management SaaS — to show the standard in practice without polluting your checkout.
+
 *Note: We are still iterating on this - feedback actively wanted - just open a GH issue*
 
 ## Top-level Directory Structure
