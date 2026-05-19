@@ -2,7 +2,7 @@
 
 > An open standard for organizing projects where humans and AI ship together.
 
-AI output is bounded by input quality, so context deserves the same discipline as code. CRAFT splits **slow-moving human signal** (vision, domain, references) from **fast-moving AI output** (plans, builds) and keeps each at a stable, predictable path. Agents find what they need by `cat`, not by search.
+AI output is bounded by input quality, so context deserves the same discipline as code. CRAFT splits **slow-moving human signal** (vision, domain, references) from **fast-moving AI output** (plans, builds) and keeps each at a stable, predictable path.
 
 ## The tree
 

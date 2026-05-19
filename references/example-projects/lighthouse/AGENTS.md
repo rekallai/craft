@@ -1,22 +1,34 @@
-# AGENTS.md — Lighthouse
+# AGENTS.md
 
-This project follows the **CRAFT** standard. See the CRAFT spec for the canonical directory contract.
+## Directory map
 
-## Project-specific notes
+| Path          | Contents                                                 | Write here? |
+| ------------- | -------------------------------------------------------- | ----------- |
+| `specs/`      | Project specs — vision, domain, scope, positioning       | No          |
+| `references/` | Supporting inputs — docs, data, transcripts, exports     | No          |
+| `prompts/`    | Reusable patterns — skills, jobs, checklists, QA         | No          |
+| `plans/`      | Plans, reports, drafts                                   | Yes         |
+| `build/`      | Shippable code repositories and artifacts                | Yes         |
 
-- **Lighthouse** is an invoice-management SaaS for small-business owners. Domain terms (Net 30, ACH, dunning) live in `specs/domain.md`.
-- The MVP scope is locked — see `specs/product/mvp-scope.md` before proposing features.
-- Customer-research transcripts and product-Slack dumps in `references/` are the source of truth for what users actually said; prefer them over your own assumptions.
+## Where to read
 
-## Where to Read
+- `specs/vision.md`, `specs/domain.md` — product and terminology
+- `specs/product/` — scope, MVP definitions
+- `specs/marketing/` — positioning, messaging
+- `references/datasets/<name>/` — datasets
+- `references/slack/<channel>/`, `references/linear/<board>/` — feeds and exports
+- `references/google-docs/<file>.md`, `references/google-meets/<date>.md` — documents and transcripts
+- `references/figma/<project>/` — design exports
+- `prompts/skills/`, `prompts/jobs/`, `prompts/checklists/`, `prompts/qa/` — reusable patterns
 
-- `specs/vision.md`, `specs/domain.md`, `specs/product/mvp-scope.md`, `specs/marketing/value-proposition.md`
-- `references/google-meets/` — customer interviews
-- `references/slack/product/` — internal product discussion
-- `prompts/skills/`, `prompts/jobs/`, `prompts/qa/` — reusable patterns
+## Where to write
 
-## Where to Write
+- Plans → `plans/<area>/<name>.md`. Every plan starts with a TLDR.
+- Optional rich-HTML sibling → `plans/<area>/<name>.html` using `plans/style.css`.
+- Code → `build/<repo-name>/`.
 
-- Plans → `plans/<area>/<name>.md` (always TLDR-first)
-- Code → `build/lighthouse-app/`
-- Never write to `specs/` or `references/` without an explicit instruction
+## Rules
+
+- Do not modify files in `specs/` or `references/` without an explicit instruction.
+- Every plan markdown begins with a TLDR.
+- Prefer flat files at stable paths over deep nesting.
