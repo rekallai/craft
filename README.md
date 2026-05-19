@@ -1,24 +1,35 @@
-# Context-Reusable Agentic Folder Tree (CRAFT)
+# CRAFT — Context-Reusable Agentic Folder Tree
 
-CRAFT is an open standard for structuring agentic projects — where humans and AI collaborate on everything from product vision to shipped code. It rests on a simple premise: the quality of AI output is bounded by the quality of its inputs, so context deserves the same care as code. CRAFT separates slow-moving human signal (vision, domain knowledge, references) from fast-moving AI output (plans, drafts, repositories), and keeps each at a stable, predictable path. The result is a working environment where context is reusable across plans, human intent stays legible, and agents can find what they need without MCP overhead or search gymnastics — just flat files in a tree designed for the way agentic work actually flows.
+> An open standard for organizing projects where humans and AI ship together.
 
-This repository is itself a CRAFT-shaped scaffold: the top-level `specs/`, `references/`, `prompts/`, `plans/`, and `build/` directories ship empty (each with a short README explaining what belongs there), so you can clone it and start filling in your own project. A worked example of a fully populated CRAFT tree lives in [`references/example-projects/lighthouse/`](references/example-projects/lighthouse/) — a fictional invoice-management SaaS — to show the standard in practice without polluting your checkout.
+AI output is bounded by input quality, so context deserves the same discipline as code. CRAFT splits **slow-moving human signal** (vision, domain, references) from **fast-moving AI output** (plans, builds) and keeps each at a stable, predictable path. Agents find what they need by `cat`, not by search.
 
-*Note: We are still iterating on this - feedback actively wanted - just open a GH issue*
+## The tree
 
-## Top-level Directory Structure
+```text
+your-project/
+├── AGENTS.md       # entry point for agents — directory map + conventions
+├── specs/          # what & why — vision, domain, scope          (human)
+├── references/     # supporting inputs — docs, data, feeds       (human)
+├── prompts/        # reusable patterns — skills, jobs, QA        (human)
+├── plans/          # plans, reports, drafts (TLDR-first)         (AI)
+└── build/          # shippable code repos                        (AI)
+```
 
+## Quick start
 
-| Path          | Purpose                                                  | Authorship   |
-| ------------- | -------------------------------------------------------- | ------------ |
-| `specs/`      | High-signal project specifications                       | Mostly Human |
-| `references/` | Additional inputs such as docs, data or feeds            | Mostly Human |
-| `prompts/`    | Known patterns for agents to run                         | Mostly Human |
-| `plans/`      | AI-collaborated well organized plans, reports and drafts | Mostly AI    |
-| `build/`      | Github code repositories                                 | Mostly AI    |
+Use this repo as a scaffold — top-level directories ship empty, each with a short README explaining what goes there:
 
+```bash
+git clone <this-repo> my-project
+cd my-project && rm -rf .git && git init
+```
 
-*Note: Supplemented with a top level AGENTS.md for agent context loading of directory structure and common conventions*
+For a fully-populated worked example, see [`references/example-projects/lighthouse/`](references/example-projects/lighthouse/) — a fictional invoice-management SaaS that fills in every directory.
+
+*Still iterating — feedback welcome via GH issues.*
+
+---
 
 ## `specs/`
 
